@@ -13,7 +13,7 @@ KEY_STATS = [
     "Goal Efficiency",
 ]
 
-def top_n_bar_chart(df, column, n=10, color="skyblue"):
+def top_n_bar_chart(df, column, n=10, color="coral"):
     """Bar chart of the top n players for a given numeric column."""
     top_df = df.sort_values(column, ascending=False).head(n)
 
@@ -26,7 +26,7 @@ def top_n_bar_chart(df, column, n=10, color="skyblue"):
     fig.tight_layout()
     return fig
 
-def distribution_histogram(df, column, bins=10, log_scale=False, color="teal"):
+def distribution_histogram(df, column, bins=10, log_scale=False, color="coral"):
     """Histogram showing how a numeric column is distributed."""
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.hist(df[column], bins=bins, color=color)
@@ -47,7 +47,7 @@ def distribution_histogram(df, column, bins=10, log_scale=False, color="teal"):
 def players_by_category_chart(df):
     """Count plot showing how many players are in each stats category."""
     fig, ax = plt.subplots(figsize=(10, 5))
-    sns.countplot(data=df, x="Category", ax=ax)
+    sns.countplot(data=df, x="Category", ax=ax,color="coral")
     ax.set_title("Number of Players by Category")
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right")
     fig.tight_layout()
@@ -56,12 +56,12 @@ def players_by_category_chart(df):
 def boxplot(df, column):
     """Boxplot for a single numeric column."""
     fig, ax = plt.subplots(figsize=(8, 5))
-    sns.boxplot(y=df[column], ax=ax)
+    sns.boxplot(y=df[column], ax=ax, color="coral")
     ax.set_title(f"{column} Boxplot")
     fig.tight_layout()
     return fig
 
-def scatter_chart(df, x_column, y_column, color="purple"):
+def scatter_chart(df, x_column, y_column, color="coral"):
     """Scatter plot comparing two numeric columns."""
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.scatter(df[x_column], df[y_column], color=color)
