@@ -1,15 +1,3 @@
-"""
-FIFA World Cup 2026 — Player Analysis Dashboard
-------------------------------------------------
-A single-file Streamlit dashboard. Visual identity: "Floodlight" —
-a premium night-match aesthetic built entirely from one warm-orange
-family, from deep near-black ember tones through to light peach,
-gold and cream. No colors outside that family are used anywhere,
-including the charts, tables, and info cards.
-
-Run from the project root:
-    streamlit run dashboard/app.py
-"""
 
 import sys
 from pathlib import Path
@@ -44,7 +32,7 @@ except Exception:
             "max": df.max(numeric_only=True),
         }
 
-DATA_PATH = ROOT_DIR / "data" / "players_cleaned.csv"
+DATA_PATH = ROOT_DIR / "Data" / "players_cleaned.csv"
 
 KEY_STATS = [
     "Assists",
