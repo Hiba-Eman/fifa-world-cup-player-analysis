@@ -14,7 +14,7 @@ dashboard.
 ```
 fifa-world-cup-player-analysis/
 │
-├── data/                      # Raw and cleaned CSV files
+├── Data/                      # Raw and cleaned CSV files
 │   ├── players_raw.csv
 │   ├── players_cleaned.csv
 │   └── general.csv, attacking.csv, defending.csv, ... (one CSV per FIFA category)
@@ -32,7 +32,7 @@ fifa-world-cup-player-analysis/
 │   └── clean_data.py          # Script version of the cleaning notebook
 │
 ├── analysis/
-│   ├── statistics.py          # Descriptive stats + top-N rankings
+│   ├── stats.py          # Descriptive stats + top-N rankings
 │   └── visualizations.py      # Reusable chart functions (used by the dashboard)
 │
 ├── dashboard/
@@ -48,7 +48,7 @@ Player stats are scraped from FIFA's "Player Statistics" page, which is
 split into 8 categories: **General, Attacking, Distribution, Defending,
 Discipline, Goalkeeping, Movement, and Physical**. Each category has its
 own table with different columns, so all 8 tables are saved separately
-in `data/` and also combined into one long-format file, `players_raw.csv`
+in `Data/` and also combined into one long-format file, `players_raw.csv`
 (one row per player per category).
 
 After cleaning, `players_cleaned.csv` adds two new features:
@@ -64,7 +64,7 @@ After cleaning, `players_cleaned.csv` adds two new features:
    pip install -r requirements.txt
    ```
 
-2. **(Optional) Re-scrape the data.** The CSV files in `data/` are
+2. **(Optional) Re-scrape the data.** The CSV files in `Data/` are
    already provided, so this step can be skipped unless you want fresh
    data:
 
